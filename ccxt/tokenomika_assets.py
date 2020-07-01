@@ -3,15 +3,15 @@ TESTNET_ASSETS = {
         "id": "WAVES",
         "precision": 8
     },
-    "BTC": {
+    "TBTC": {
         "id": "Emn8cyGDFgnLCKLTXqVWhKJARhtR2muBUuZaSmqNzDfn",
         "precision": 8
     },
-    "ETH": {
+    "TETH": {
         "id": "Co11Tbj83TeZCnuXrZQwv6Bs4XG2sm1vGQiQ4FLDjJWs",
         "precision": 8
     },
-    "USD": {
+    "TUSD": {
         "id": "C7NpjX1zJ1JrSGw8AvpBwfwUHU44a2u6mhCjdkJgXgrT",
         "precision": 8
     },
@@ -23,7 +23,7 @@ TESTNET_ASSETS = {
         "id": "CtuwNwubHNVwhw1FznxwQ77DPaaTrL6MsqQtJHip79XA",
         "precision": 8
     },
-    "XRP": {
+    "TXRP": {
         "id": "HUdXNRE4VcCx64PCPYwh6KL2cxvRaKcR8bXe3Ar9fG4p",
         "precision": 6
     },
@@ -34,15 +34,15 @@ TESTNET_ASSETS = {
 }
 
 TESTNET_PAIRS = [
-    ("WAVES", "BTC"),
-    ("BTC", "TEUR"),
-    ("BTC", "USD"),
-    ("ETH", "BTC"),
-    ("ETH", "TEUR"),
-    ("WEST", "BTC"),
-    ("WEST", "WAVES"),
-    ("WEST", "USD"),
-    ("XRP", "WAVES")
+    ("WAVES", "TBTC"),
+    ("TBTC", "TUSD"),
+    ("TETH", "TEUR"),
+    ("TBTC", "TEUR"),
+    ("TETH", "TBTC"),
+    ("TXRP", "WAVES"),
+    ("WAVES", "TXRP"),
+    ("WAVES", "TEURS"),
+    ("TEURS", "TBTC"),
 ]
 
 MAINNET_ASSETS = {
@@ -50,15 +50,15 @@ MAINNET_ASSETS = {
         "id": "WAVES",
         "precision": 8
     },
-    "BTC": {
+    "TBTC": {
         "id": "9SxLVHaEGTeEjRiAMnEw74YWWndQDRw8SZhknK9EYoUd",
         "precision": 8
     },
-    "ETH": {
+    "TETH": {
         "id": "HnEtQ7kZCbpa8gDMtkKE1qkvqZVhQBR6iEo1xMoX1abv",
         "precision": 8
     },
-    "USD": {
+    "TUSD": {
         "id": "ARUnrACYathMJwq6gPvnb9kW2FHXTYLaVbsKwB2JC1DH",
         "precision": 8
     },
@@ -73,13 +73,19 @@ MAINNET_ASSETS = {
 }
 
 MAINNET_PAIRS = [
-    ("WAVES", "BTC"),
-    ("BTC", "TEUR"),
-    ("BTC", "USD"),
-    ("ETH", "BTC"),
-    ("ETH", "TEUR"),
-    ("WEST", "BTC"),
+    ("WAVES", "TBTC"),
+    ("TBTC", "TEUR"),
+    ("TBTC", "TUSD"),
+    ("TETH", "TBTC"),
+    ("TETH", "TEUR"),
+    ("WEST", "TBTC"),
     ("WEST", "WAVES"),
-    ("WEST", "BTC"),
+    ("WEST", "TBTC"),
 
 ]
+
+COMMISSIONS = {
+    "TETH/TBTC": 1100000,
+    "TBTC/TUSD": 1100000
+}
+

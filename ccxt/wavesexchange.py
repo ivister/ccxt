@@ -22,7 +22,8 @@ from ccxt.tokenomika_assets import (
     TESTNET_ASSETS,
     TESTNET_PAIRS,
     MAINNET_ASSETS,
-    MAINNET_PAIRS
+    MAINNET_PAIRS,
+    COMMISSIONS
 )
 
 
@@ -820,7 +821,7 @@ class wavesexchange(Exchange):
         timestamp = self.milliseconds()
         expiration = self.sum(timestamp, self.get_default_expiry())
         # calculate the fee
-        baseMatcherFee = self.safe_integer(self.options, 'matcherFee', 300000)
+        baseMatcherFee = self.safe_integer(COMMISSIONS, 'matcherFee', 700000)
         rates = self.matcherGetMatcherSettingsRates()
         # {'34N9YcEETLWn93qYQ64EsP1x89tSruJU44RrEMSXXEPJ': 1.23762376,
         #   '62LyMjcr2DtiyF5yVXFhoQ2q414VPPJXjsNYp72SuDCH': 0.01101575,
